@@ -1,0 +1,23 @@
+[package]
+name = "flowfs-desktop"
+version = "0.1.0"
+authors = ["korintje <t.hosomi1410@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { version = "0.5", features = ["desktop"] }
+tracing = "0.1.40"
+dioxus-logger = "0.5.0"
+serde = { version = "1.0", features = ["serde_derive"]}
+serde_json = { version = "1.0", features = ["raw_value"]}
+uuid = { version = "1.8", features = [ "v4", "fast-rng", "macro-diagnostics", "serde" ] }
+getrandom = { version = "0.2", features = ["js"] }
+futures = "0.3.30"
+sqlx = { version = "0.7", features = [ "runtime-tokio", "sqlite", "chrono", "uuid" ] }
+log = "0.4.21"
+async-recursion = "1.1.1"
+toml = "0.8.14"
+web-sys = { version = "0.3.69", features = ["Window", "Document", "Element"]}
+reqwest = "0.12.5"
